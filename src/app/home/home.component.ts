@@ -7,11 +7,20 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-
   constructor(private router: Router) { }
 
   redirectToListar() {
     // Redirige a la vista de listar cuando se hace clic en el botón
     this.router.navigate(['/listar']);
+
+  }
+  filtrarDocumentos() {
+    this.router.navigate(['/busqueda-filtro']);
+  }
+
+
+  redirectToGenerarActa() {
+  
+    this.router.navigate(['/generar-acta']);
   }
 }

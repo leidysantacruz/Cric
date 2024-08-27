@@ -222,7 +222,7 @@ body {
   top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
+  overflow: hidden; /* Hide scrollbars */
   background-color: rgba(0, 0, 0, 0.4); /* Black background with opacity */
 }
 
@@ -232,9 +232,9 @@ body {
 
 .modal-content {
   background-color: var(--color-gray-light);
-  margin: 10% auto; /* Center the modal vertically and horizontally */
+  margin: 10% auto; /* Center horizontally and add margin from top */
   padding: 20px;
-  border: 1px solid var(--color-green-dark);
+  border: 1px solid var(--color-green-dark); /* Single green border */
   border-radius: 10px;
   width: 80%;
   max-width: 1200px; /* Adjusted width for more space */
@@ -300,7 +300,7 @@ body {
 }
 
 .btn-cancel {
-  background-color: var(--color-red); /* Red color for cancel button */
+  background-color: red; /* Red color for cancel button */
   color: white;
   padding: 10px 20px;
   border: none;
@@ -312,50 +312,38 @@ body {
   opacity: 0.8;
 }
 
-/* Success Modal Styles */
-.modal-success {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgba(0, 0, 0, 0.4); /* Black background with opacity */
-}
-
-.modal-success.show {
-  display: block; /* Show the modal */
-}
-
-.modal-content-success {
-  background-color: var(--color-gray-light);
-  margin: 10% auto; /* Center the modal vertically and horizontally */
+#successModal {
+  background-color: var(--color-gray-light); /* Color uniforme de fondo */
+  width: 400px; /* Ancho del modal */
+  height: 250px; /* Altura del modal */
   padding: 20px;
-  border: 1px solid var(--color-green-dark);
+  border: 1px solid var(--color-green-dark); /* Borde verde */
   border-radius: 10px;
-  width: 50%;
-  max-width: 500px; /* Adjust width for better visibility */
+  position: fixed; /* Posición fija */
+  top: 35%; /* Centrar verticalmente */
+  left: 50%; /* Centrar horizontalmente */
+  transform: translate(-50%, -50%); /* Perfectamente centrado */
   text-align: center;
-  position: relative;
+  overflow: hidden; /* Ocultar desbordamiento */
 }
 
-.modal-content-success p {
+
+#successModal p {
   font-size: 18px;
-  color: var(--color-green-dark);
-  margin-bottom: 20px;
+  color: var(--color-gray-dark);
+  margin: 0;
 }
 
-.modal-content-success .btn-close-success {
-  background-color:red;
+#successModal .btn-close-success {
+  background-color: var(--color-green-dark);
   color: white;
   padding: 10px 20px;
   border: none;
-  border-radius: 5px;
+  border-radius: 25px; /* Oval shape */
   cursor: pointer;
+  margin-top: 20px;
 }
 
-.modal-content-success .btn-close-success:hover {
+#successModal .btn-close-success:hover {
   opacity: 0.8;
 }
