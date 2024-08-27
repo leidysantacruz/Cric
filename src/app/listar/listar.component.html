@@ -1,27 +1,24 @@
 <div class="container-main">
-    <!-- Header -->
-    <div class="header">
+    <header class="header">
         <div class="header-content">
-            <a href="#" class="back-arrow">←</a>
-            <form action="#" method="get">
-                <input type="text" placeholder="Buscar" />
+            <a href="#" class="sitea-title">SITEA</a>
+            <form>
+                <input type="text" placeholder="Buscar">
                 <button type="submit" class="btn-search">Buscar</button>
             </form>
         </div>
-    </div>
+    </header>
 
-    <!-- Cuerpo de la página -->
     <div class="container-body">
-        <!-- Menú lateral izquierdo -->
         <div class="container-body_left">
             <nav>
                 <ul>
-                    <li>NOMBRE DE COMPONENTE
+                    <li>Nombre de Componente
                         <ul class="dropdown-menu">
-                            <li>Subseccion 1</li>
-                            <li>Subseccion 2</li>
-                            <li>Subseccion 3</li>
-                            <li>Subseccion n</li>
+                            <li>Subsección 1</li>
+                            <li>Subsección 2</li>
+                            <li>Subsección 3</li>
+                            <li>Subsección n</li>
                         </ul>
                     </li>
                 </ul>
@@ -29,25 +26,21 @@
             <button class="btn-generate">Generar Acta</button>
         </div>
 
-        <!-- Contenido principal -->
         <div class="container-body_right">
             <div class="controller">
-                <!-- Botón para abrir el modal -->
-                <a class="btn-secondary" (click)="openModal()">Cargar documento</a>
+                <button class="btn-cargar-doc" (click)="openModal()">Cargar documento</button>
             </div>
 
-            <!-- Modal -->
-            <div id="myModal" class="modal">
+            <div id="myModal" class="modal" [ngClass]="{'show': showModal}">
                 <div class="modal-content">
                     <span class="close" (click)="closeModal()">&times;</span>
                     <p>¿El documento que desea cargar a qué proceso está relacionado?</p>
                     <p>Seleccione la opción que corresponda</p>
-                    <button class="btn-new">Nuevo</button>
+                    <button class="btn-new" (click)="openNuevoView()">Nuevo</button>
                     <button class="btn-existing">Existente</button>
                 </div>
             </div>
 
-            <!-- Tabla de documentos -->
             <table class="document-table">
                 <thead>
                     <tr>
@@ -58,24 +51,22 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- Ejemplos de filas vacías -->
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>Proceso 1</td>
+                        <td>Documento 1</td>
+                        <td>12345</td>
                         <td>
-                            <button class="btn view" title="Ver">👁️</button>
-                            <button class="btn edit" title="Editar">✏️</button>
-                            <button class="btn delete" title="Eliminar">🗑️</button>
+                            <button class="btn view" title="Ver">Ver</button>
+                            <button class="btn edit" title="Editar">Editar</button>
+                            <button class="btn delete" title="Eliminar">Eliminar</button>
                         </td>
                     </tr>
-                    <!-- Repite el contenido de las filas según sea necesario -->
+                    <!-- Agrega más filas aquí según sea necesario -->
                 </tbody>
             </table>
         </div>
     </div>
 
-    <!-- Footer -->
     <div class="footer">
         © Consejo regional indígena del Cauca 2023
     </div>

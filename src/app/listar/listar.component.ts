@@ -1,23 +1,30 @@
 import { Component } from '@angular/core';
+import { NgClass } from '@angular/common'; // Importa NgClass
+import { Router } from '@angular/router'; // Importa Router para la navegación
 
 @Component({
   selector: 'app-listar',
-  templateUrl: './listar.component.html',  // Asegúrate de que el nombre coincide con el archivo HTML correcto
+  standalone: true, // Asegúrate de que este componente sea standalone
+  imports: [NgClass], // Agrega NgClass a los imports del componente
+  templateUrl: './listar.component.html',
   styleUrls: ['./listar.component.css']
 })
-export class ListarComponent {  // Nombre correcto de la clase
+export class ListarComponent {
+  showModal: boolean = false;
+
+  constructor(private router: Router) {} // Inyecta el Router en el constructor
 
   openModal() {
-    const modal = document.getElementById("myModal");
-    if (modal) {
-      modal.style.display = "block";
-    }
+    this.showModal = true;
   }
 
   closeModal() {
-    const modal = document.getElementById("myModal");
-    if (modal) {
-      modal.style.display = "none";
-    }
+    this.showModal = false;
+  }
+
+  // Método para redirigir a la vista de Cargar Documento cuando se hace clic en "Nuevo"
+  openNuevoView() {
+    this.closeModal();  // Cierra el modal antes de redirigir
+    this.router.navigate(['/cargar-documento']);  // Redirige a la ruta de 'Cargar Documento'
   }
 }

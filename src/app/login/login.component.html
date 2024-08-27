@@ -1,21 +1,21 @@
-<div class="page-wrapper">
-    <h1 class="sitea-title">SITEA</h1>
-    <div class="login-container">
-        <form (ngSubmit)="onSubmit()">
-            <div class="form-group">
-                <label for="username">Usuario</label>
-                <input type="text" id="username" name="username" [(ngModel)]="username" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Contraseña</label>
-                <input type="password" id="password" name="password" [(ngModel)]="password" required>
-            </div>
-            <button type="submit">Ingresar</button>
-        </form>
-    </div>
-    <div class="green-line"></div>
-    <div class="dark-bottom"></div>
-    <div class="footer">
-        <p>© Consejo regional indígena del Cauca 2023</p>
+<div class="container">
+    <div class="container-login">
+        <h1>SITEA</h1>
+        <div class="container-form">
+            <form class="text-center w-75">
+                <div class="mb-3">
+                  <label for="userName" class="form-label fs-4">Usuario</label>
+                  <input type="password" class="form-control w-100" id="userName">
+                </div>
+                <div class="mb-3">
+                    <label for="userName" class="form-label fs-4">Contraseña</label>
+                    <input type="password" class="form-control" id="userName">
+                  </div>
+                <button type="submit" class="btn my-4 px-4 fs-5 rounded-pill border border-success shadow">Ingresar</button>
+              </form>
+        </div>
     </div>
 </div>
+<footer class="footer border-top border-success">
+    <p style="text-align: center"> Copyright &copy; 2023-<script>document.write(new Date().getFullYear())</script> PEA-CRIC. Todos los derechos reservados.</p>
+</footer>

@@ -1,0 +1,205 @@
+:root {
+    --color-gray-dark: #1a1a1a; /* Negro más oscuro */
+    --color-gray: #383B39; /* Negro más claro */
+    --color-gray-light: #D9D9D9;
+    --color-green-dark: #5AA74E;
+    --color-green-light: #A5D59D;
+    --color-brown: #6c4646;
+    --color-yellow: #F1C40F;
+    --color-red: #E74C3C;
+    --font-size-category: 17px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-gray-dark); /* Fondo negro fuera de la tabla */
+    font-family: sans-serif;
+    overflow: hidden; /* Evita que se desplace la plantilla */
+}
+
+.container-main {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.header {
+    background-color: var(--color-gray);
+    color: var(--color-gray-light);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.sitea-title {
+    font-size: 24px;
+    color: var(--color-green-dark);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.header-content form {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+}
+
+.header-content input {
+    padding: 5px;
+    margin-right: 10px;
+    border-radius: 4px;
+    border: 1px solid var(--color-green-dark);
+}
+
+.btn-search {
+    background-color: var(--color-green-dark);
+    color: var(--color-gray-light);
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.container-body {
+    display: flex;
+    flex: 1;
+    background-color: #fff; /* Fondo blanco dentro de las líneas verdes */
+    overflow: hidden; /* Evita el desplazamiento del contenedor */
+}
+
+.container-body_left {
+    width: 250px;
+    background-color: var(--color-gray);
+    color: var(--color-green-light);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 1px solid var(--color-green-dark);
+    flex-shrink: 0;
+}
+
+.container-body_left nav ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+
+.container-body_left nav ul li {
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+.container-body_left nav ul li .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--color-gray-light);
+    padding: 10px;
+    list-style-type: none;
+    margin: 0;
+    width: 100%;
+}
+
+.container-body_left nav ul li:hover .dropdown-menu {
+    display: block;
+}
+
+.container-body_left nav ul li .dropdown-menu li {
+    padding: 5px;
+}
+
+.container-body_left nav ul li .dropdown-menu li ul {
+    padding-left: 15px;
+}
+
+.btn-generate {
+    background-color: var(--color-green-dark);
+    color: var(--color-gray-light);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: auto;
+}
+
+.btn-cargar-doc, .btn-filtros {
+    background-color: var(--color-green-dark);
+    color: var(--color-gray-light);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.container-body_right {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto; /* Permite el desplazamiento vertical solo en esta sección */
+    background-color: #fff; /* Fondo blanco para el área de contenido */
+}
+
+.controller {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+/* Estilos para la tabla */
+.table-container {
+    width: 100%;
+}
+
+.document-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.document-table th, .document-table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.document-table th {
+    background-color: var(--color-green-dark);
+    color: white;
+}
+
+.document-table tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+.view-btn {
+    background-color: var(--color-green-dark); /* Mismo color que el botón 'Generar Acta' */
+    color: var(--color-gray-light); /* Color del texto del botón */
+    border: none;
+    padding: 6px 12px;
+    border-radius: 25px; /* Hacer el botón ovalado */
+    cursor: pointer;
+    text-align: center;
+    font-size: var(--font-size-category);
+}
+
+.footer {
+    background-color: var(--color-gray);
+    color: var(--color-gray-light);
+    padding: 10px;
+    text-align: center;
+    flex-shrink: 0;
+}
