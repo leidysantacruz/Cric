@@ -1,135 +1,146 @@
 <div class="container-main">
-  <header class="header">
-      <div class="header-content">
-          <a href="#" class="sitea-title">SITEA</a>
-          <form>
-              <input type="text" placeholder="Buscar">
-              <button type="submit" class="btn-search">Buscar</button>
-          </form>
-      </div>
-  </header>
+    <header class="header">
+        <div class="header-content">
+            <a href="#" class="sitea-title">SITEA</a>
+            <form>
+                <input type="text" placeholder="Buscar">
+                <button type="submit" class="btn-search">Buscar</button>
+            </form>
+        </div>
+    </header>
 
-  <div class="container-body">
-      <div class="container-body_left">
-          <nav>
-              <ul>
-                  <li>Nombre de Componente
-                      <ul class="dropdown-menu">
-                          <li>Subsección 1</li>
-                          <li>Subsección 2</li>
-                          <li>Subsección 3</li>
-                          <li>Subsección n</li>
-                      </ul>
-                  </li>
-              </ul>
-          </nav>
-      </div>
+    <div class="container-body">
+        <div class="container-body_left">
+            <nav>
+                <ul>
+                    <li>Nombre de Componente
+                        <ul class="dropdown-menu">
+                            <li>Subsección 1</li>
+                            <li>Subsección 2</li>
+                            <li>Subsección 3</li>
+                            <li>Subsección n</li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <button class="btn-generate">Generar Acta</button>
+        </div>
 
-      <div class="container-body_right">
-          <div class="document-form">
-              <div class="form-row">
-                  <label>Subsección</label>
-                  <select>
-                      <option>Seleccione</option>
-                  </select>
-              </div>
-              <div class="form-row">
-                  <label>Serie</label>
-                  <select>
-                      <option>Seleccione</option>
-                  </select>
-              </div>
-              <div class="form-row">
-                  <label>Subserie</label>
-                  <select>
-                      <option>Seleccione</option>
-                  </select>
-              </div>
-              <div class="form-row">
-                  <label>Tipo Documental</label>
-                  <select>
-                      <option>Seleccione</option>
-                  </select>
-              </div>
-              <div class="form-row">
-                  <label>Nombre de Documento</label>
-                  <input type="text">
-              </div>
-              <div class="form-row">
-                  <label>Atributo #1</label>
-                  <input type="text">
-              </div>
-              <div class="form-row">
-                  <label>Atributo #2</label>
-                  <input type="text">
-              </div>
-              <div class="form-row">
-                  <label>Atributo #n</label>
-                  <input type="text">
-              </div>
-              <div class="upload-zone">
-                  <p>Arrastra archivos a esta zona</p>
-                  <p>o</p>
-                  <div class="button-container">
-                      <button class="btn-upload">Elegir el archivo en mi ordenador</button>
-                      <button class="btn-more">Añadir más archivos</button>
-                      <button class="btn-send">Enviar</button>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
+        <div class="container-body_right">
+            <div class="document-form">
+                <div class="form-row">
+                    <label>Subsección</label>
+                    <select>
+                        <option>Seleccione</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label>Serie</label>
+                    <select>
+                        <option>Seleccione</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label>Subserie</label>
+                    <select>
+                        <option>Seleccione</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label>Tipo Documental</label>
+                    <select>
+                        <option>Seleccione</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label>Nombre de Documento</label>
+                    <input type="text">
+                </div>
+                <div class="form-row">
+                    <label>Atributo #1</label>
+                    <input type="text">
+                </div>
+                <div class="form-row">
+                    <label>Atributo #2</label>
+                    <input type="text">
+                </div>
+                <div class="form-row">
+                    <label>Atributo #n</label>
+                    <input type="text">
+                </div>
+                <div class="upload-zone">
+                    <p>Arrastra archivos a esta zona</p>
+                    <p>o</p>
+                    <div class="button-container">
+                        <button class="btn-upload">Elegir el archivo en mi ordenador</button>
+                        <button class="btn-more">Añadir más archivos</button>
+                        <button id="btn-send" class="btn-send" (click)="openModal()">Enviar</button>
+                    </div>
+                </div>
+            </div>
 
-  <footer class="footer">
-      © Consejo regional indígena del Cauca 2023
-  </footer>
-</div>
+            <!-- Modal -->
+            <div id="myModal" class="modal" [ngClass]="{'show': showModal}">
+                <div class="modal-content">
+                    <span class="close" (click)="closeModal()">&times;</span>
+                    <form>
+                        <div class="form-row">
+                            <label>Subsección</label>
+                            <input type="text">
+                            <label>Serie</label>
+                            <input type="text">
+                        </div>
+                        <div class="form-row">
+                            <label>Subserie</label>
+                            <input type="text">
+                            <label>Tipo Documental</label>
+                            <input type="text">
+                        </div>
+                        <div class="form-row">
+                            <label>N° radicado</label>
+                            <input type="text">
+                            <label>Nombre Documento</label>
+                            <input type="text">
+                        </div>
+                        <div class="form-row">
+                            <label>Fecha de radicado</label>
+                            <input type="text">
+                            <label>Tipo Documento</label>
+                            <input type="text">
+                        </div>
+                        <div class="form-row">
+                            <label>Atributo 1</label>
+                            <input type="text">
+                            <label>Atributo #2</label>
+                            <input type="text">
+                        </div>
+                        <div class="form-row">
+                            <label>Atributo #n</label>
+                            <input type="text">
+                            <label>Nombre Archivo</label>
+                            <input type="text">
+                        </div>
+                        <div class="button-container">
+                            <button type="submit" class="btn-confirm" (click)="confirm($event)">Confirmar</button>
+                            <button type="button" class="btn-cancel" (click)="closeModal()">Cancelar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
 
-<!-- Modal -->
-<div id="myModal" class="modal">
-  <div class="modal-content">
-      <span class="close">&times;</span>
-      <form>
-          <div class="form-row">
-              <label>Subsección</label>
-              <input type="text">
-              <label>Serie</label>
-              <input type="text">
-          </div>
-          <div class="form-row">
-              <label>Subserie</label>
-              <input type="text">
-              <label>Tipo Documental</label>
-              <input type="text">
-          </div>
-          <div class="form-row">
-              <label>N° radicado</label>
-              <input type="text">
-              <label>Nombre Documento</label>
-              <input type="text">
-          </div>
-          <div class="form-row">
-              <label>Fecha de radicado</label>
-              <input type="text">
-              <label>Tipo Documento</label>
-              <input type="text">
-          </div>
-          <div class="form-row">
-              <label>Atributo 1</label>
-              <input type="text">
-              <label>Atributo #2</label>
-              <input type="text">
-          </div>
-          <div class="form-row">
-              <label>Atributo #n</label>
-              <input type="text">
-              <label>Nombre Archivo</label>
-              <input type="text">
-          </div>
-          <div class="button-container">
-              <button type="submit" class="btn-confirm">Confirmar</button>
-              <button type="button" class="btn-cancel">Cancelar</button>
-          </div>
-      </form>
-  </div>
+            <!-- Modal de Confirmación -->
+            <div id="successModal" class="modal" [ngClass]="{'show': showSuccessModal}">
+                <div class="modal-content">
+                    <p>El proceso fue exitoso!</p>
+                    <div class="button-container">
+                        <button class="btn-close-success" (click)="closeSuccessModal()">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        © Consejo regional indígena del Cauca 2023
+    </footer>
 </div>

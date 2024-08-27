@@ -1,6 +1,6 @@
 :root {
-  --color-gray-dark: #1a1a1a; /* Negro más oscuro */
-  --color-gray: #383B39; /* Negro más claro */
+  --color-gray-dark: #1a1a1a; 
+  --color-gray: #383B39; 
   --color-gray-light: #D9D9D9;
   --color-green-dark: #5AA74E;
   --color-green-light: #A5D59D;
@@ -15,9 +15,9 @@ body {
   padding: 0;
   width: 100%;
   height: 100vh;
-  background-color: var(--color-gray-dark); /* Fondo negro fuera de la tabla */
+  background-color: var(--color-gray-dark); 
   font-family: sans-serif;
-  overflow: hidden; /* Evita que se desplace la plantilla */
+  overflow: hidden; 
 }
 
 .container-main {
@@ -150,8 +150,8 @@ body {
 .container-body_right {
   flex: 1;
   padding: 20px;
-  overflow-y: auto; /* Permite el desplazamiento vertical solo en esta sección */
-  background-color: #fff; /* Fondo blanco para el área de contenido */
+  overflow-y: auto; 
+  background-color: #fff; 
 }
 
 .controller {
@@ -160,7 +160,7 @@ body {
   margin-bottom: 15px;
 }
 
-/* Estilos para la tabla */
+
 .table-container {
   width: 100%;
 }
@@ -187,7 +187,7 @@ body {
 
 .document-table .btn {
   padding: 6px 12px;
-  border-radius: 25px; /* Hacer el botón ovalado */
+  border-radius: 25px; 
   cursor: pointer;
   text-align: center;
   font-size: var(--font-size-category);
@@ -195,13 +195,13 @@ body {
 }
 
 .document-table .btn.view {
-  background-color: var(--color-green-dark); /* Color verde para el botón 'Ver' */
-  color: var(--color-gray-light); /* Color del texto del botón */
+  background-color: var(--color-green-dark); 
+  color: var(--color-gray-light); 
 }
 
 .document-table .btn.edit {
-  background-color: var(--color-yellow); /* Color amarillo para el botón 'Editar' */
-  color: var(--color-gray-dark); /* Texto oscuro */
+  background-color: var(--color-yellow); 
+  color: var(--color-gray-dark); 
 }
 
 .document-table .btn.delete {

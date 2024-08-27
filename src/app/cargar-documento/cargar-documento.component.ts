@@ -1,38 +1,36 @@
+import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router } from '@angular/router'; // Importa Router para la navegación
 
 @Component({
   selector: 'app-cargar-documento',
+  standalone: true,
+  imports: [NgClass],
   templateUrl: './cargar-documento.component.html',
   styleUrls: ['./cargar-documento.component.css']
 })
 export class CargarDocumentoComponent {
-  
   showModal: boolean = false;
+  showSuccessModal: boolean = false; 
 
   constructor(private router: Router) {}
 
-  // Abre el modal
   openModal() {
-    this.showModal = true;
+    this.showModal = true; 
   }
 
-  // Cierra el modal
   closeModal() {
-    this.showModal = false;
+    this.showModal = false; 
   }
+  confirm(event: Event) {
+    event.preventDefault(); // Previene el comportamiento por defecto del formulario, si es necesario
+    this.showModal = false; // Cierra el modal principal
+    this.showSuccessModal = true; // Muestra el modal de éxito
+}
 
-  // Maneja la confirmación
-  confirm() {
-    // Implementa la lógica de confirmación aquí
-    console.log('Confirmado');
-    this.closeModal();
-  }
 
-  // Redirige a la vista de 'Cargar Documento' cuando se hace clic en 'Nuevo'
-  openNuevoView() {
-    this.closeModal();  // Cierra el modal antes de redirigir
-    // Verifica si deseas redirigir o solo cerrar el modal
-    this.router.navigate(['/cargar-documento']);  // Redirige a la vista de 'Cargar Documento'
+
+  closeSuccessModal() {
+    this.showSuccessModal = false; 
   }
 }

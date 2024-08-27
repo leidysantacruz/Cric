@@ -215,25 +215,147 @@ body {
 
 /* Modal Styles */
 .modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
   left: 0;
   top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(10px);
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.4); /* Black background with opacity */
+}
+
+.modal.show {
+  display: block; /* Show the modal */
 }
 
 .modal-content {
   background-color: var(--color-gray-light);
-  margin: 10% auto;
+  margin: 10% auto; /* Center the modal vertically and horizontally */
   padding: 20px;
   border: 1px solid var(--color-green-dark);
   border-radius: 10px;
   width: 80%;
-  max-width: 600px;
+  max-width: 1200px; /* Adjusted width for more space */
+  position: relative;
+  transform: translateX(10%); /* Move modal slightly to the right */
 }
 
+.close {
+  color: var(--color-gray-dark);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: var(--color-red);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal form {
+  display: flex;
+  flex-direction: row; /* Horizontal layout */
+  flex-wrap: wrap; /* Wrap if needed */
+  gap: 20px;
+  align-items: flex-start; /* Align items to the start */
+}
+
+.modal .form-row {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 300px; /* Allow a minimum width for rows */
+  margin-bottom: 15px;
+}
+
+.modal .form-row label {
+  margin-bottom: 5px;
+}
+
+.modal .form-row input,
+.modal .form-row select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%; /* Full width for input fields */
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.btn-confirm {
+  background-color: var(--color-green-dark);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-cancel {
+  background-color: var(--color-red); /* Red color for cancel button */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-confirm:hover, .btn-cancel:hover {
+  opacity: 0.8;
+}
+
+/* Success Modal Styles */
+.modal-success {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.4); /* Black background with opacity */
+}
+
+.modal-success.show {
+  display: block; /* Show the modal */
+}
+
+.modal-content-success {
+  background-color: var(--color-gray-light);
+  margin: 10% auto; /* Center the modal vertically and horizontally */
+  padding: 20px;
+  border: 1px solid var(--color-green-dark);
+  border-radius: 10px;
+  width: 50%;
+  max-width: 500px; /* Adjust width for better visibility */
+  text-align: center;
+  position: relative;
+}
+
+.modal-content-success p {
+  font-size: 18px;
+  color: var(--color-green-dark);
+  margin-bottom: 20px;
+}
+
+.modal-content-success .btn-close-success {
+  background-color:red;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-content-success .btn-close-success:hover {
+  opacity: 0.8;
+}
