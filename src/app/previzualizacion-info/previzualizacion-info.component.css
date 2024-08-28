@@ -1,0 +1,263 @@
+:root {
+    --color-gray-dark: #1a1a1a; 
+    --color-gray: #383B39; 
+    --color-gray-light: #D9D9D9;
+    --color-green-dark: #5AA74E;
+    --color-green-light: #A5D59D;
+    --color-brown: #6c4646;
+    --color-yellow: #F1C40F;
+    --color-red: #E74C3C;
+    --font-size-category: 17px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-gray-dark);
+    font-family: sans-serif;
+    overflow: hidden;
+}
+
+.container-main {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.header {
+    background-color: var(--color-gray);
+    color: var(--color-gray-light);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.sitea-title {
+    font-size: 24px;
+    color: var(--color-green-dark);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.header-content form {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+}
+
+.header-content input {
+    padding: 5px;
+    margin-right: 10px;
+    border-radius: 4px;
+    border: 1px solid var(--color-green-dark);
+}
+
+.btn-search {
+    background-color: var(--color-green-dark);
+    color: var(--color-gray-light);
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.container-body {
+    display: flex;
+    flex: 1;
+    background-color: #fff; /* Fondo blanco dentro de las líneas verdes */
+    overflow: hidden; /* Evita el desplazamiento del contenedor */
+}
+
+.container-body_left {
+    width: 250px;
+    background-color: var(--color-gray);
+    color: var(--color-green-light);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 1px solid var(--color-green-dark);
+    flex-shrink: 0;
+}
+
+.container-body_left nav ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+
+.container-body_left nav ul li {
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+.container-body_left nav ul li .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--color-gray-light);
+    padding: 10px;
+    list-style-type: none;
+    margin: 0;
+    width: 100%;
+}
+
+.container-body_left nav ul li:hover .dropdown-menu {
+    display: block;
+}
+
+.container-body_left nav ul li .dropdown-menu li {
+    padding: 5px;
+}
+
+.container-body_left nav ul li .dropdown-menu li ul {
+    padding-left: 15px;
+}
+
+.btn-generate {
+    background-color: var(--color-green-dark);
+    color: var(--color-gray-light);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: auto;
+}
+
+.btn-cargar-doc, .btn-filtros {
+    background-color: var(--color-green-dark);
+    color: var(--color-gray-light);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.container-body_right {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto; /* Permite el desplazamiento vertical solo en esta sección */
+    background-color: #fff; /* Fondo blanco para el área de contenido */
+}
+
+.controller {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+/* Estilos para el formulario de previsualización */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #eeeeee;
+    border-radius: 30px;
+    position: relative;
+    text-align: center; /* Asegura que todos los elementos de texto se centren dentro del contenedor */
+}
+
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.back-button img {
+    width: 30px;
+    height: auto;
+}
+
+h2 {
+    text-align: center;
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 0; /* Elimina el margen superior si está presente */
+    margin-bottom: 20px; /* Espacio entre el título y el contenido */
+}
+
+
+.modal-content {
+    background-color: #d3d3d3;
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.form-row label {
+    font-size: 16px;
+    color: black;
+    width: 23%;
+}
+
+.form-row input {
+    width: 23%;
+    padding: 8px;
+    border: none;
+    border-bottom: 2px solid black;
+    background-color: transparent;
+    outline: none;
+    box-sizing: border-box;
+    color: black;
+}
+
+.form-row input[readonly] {
+    background-color: transparent;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn-confirm {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.btn-cancel {
+    background-color: #E74C3C;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.footer {
+    background-color: var(--color-gray);
+    color: var(--color-green-light);
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    border-top: 1px solid var(--color-green-dark);
+    flex-shrink: 0;
+}

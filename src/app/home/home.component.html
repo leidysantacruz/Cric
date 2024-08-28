@@ -29,9 +29,10 @@
 
         <div class="container-body_right">
             <div class="controller">
-                <!-- Agregamos el event handler (click) para redirigir a la vista de listar -->
+               
                 <button class="btn-cargar-doc" (click)="redirectToListar()">Cargar documento</button>
-                <button class="btn-filtros">Filtros</button>
+                <button class="btn-filtros" (click)="goToBusquedaFiltro()">Filtros</button>
+
             </div>
 
             <div class="table-container">

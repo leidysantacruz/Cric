@@ -60,7 +60,6 @@ body {
     color: var(--color-gray-light);
 }
 
-/* ESTILOS FOOTER */
 .footer{
     height: 50px;
     display: flex;

@@ -1,117 +1,91 @@
 <div class="container-main">
-    <header class="container-fluid header">
-      <a class="">SITEA</a>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-        <button class="btn btn-outline-success btn-search" type="submit">Buscar</button>
+  <header class="header">
+    <div class="header-content">
+      <a href="#" class="sitea-title">SITEA</a>
+      <form>
+        <input type="text" placeholder="Buscar">
+        <button class="btn-search">Buscar</button>
       </form>
-    </header>
-  
-    <div class="container-body">
-      <div class="container-body_left">
-        <nav class="navbar-expand-lg">
-          <ul class="navbar-nav mb-2 mb-lg-0">
-            <li class="item-dropdown component-dropdown">
-              <a id="c-territorio" class="nav-link dropdown-toggle component" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Territorio
-              </a>
-              <ul id="c-territorio-menu" class="menu-dropdown component-dropdown-menu">
-                <li class="item-dropdown subseccion-dropdown">
-                  <a id="c-territorio-subsección1" href="#" class="dropdown-item dropdown-toggle">Subsección 1</a>
-                  <ul id="c-territorio-subsección1-menu" class="menu-dropdown subseccion-dropdown-menu">
-                    <li class="item-dropdown serie-dropdown">
-                      <a id="c-territorio-subsección1-serie1" href="#" class="dropdown-item">Serie 1</a>
-                    </li>
-                    <li class="item-dropdown serie-dropdown">
-                      <a id="c-territorio-subsección1-serie2" href="#" class="dropdown-item dropdown-toggle">Serie 2</a>
-                      <ul id="c-territorio-subsección1-serie2-menu" class="menu-dropdown serie-dropdown-menu">
-                        <li class="item-dropdown subserie-dropdown">
-                          <a id="c-territorio-subsección1-serie2-subserie1" href="#" class="dropdown-item">Subserie 1</a>
-                        </li>
-                        <li class="item-dropdown subserie-dropdown">
-                          <a id="c-territorio-subsección1-serie2-subserie2" href="#" class="dropdown-item">Subserie 2</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="item-dropdown serie-dropdown">
-                      <a id="c-territorio-subsección1-serie3" href="#" class="dropdown-item">Serie 3</a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="item-dropdown subseccion-dropdown">
-                  <a id="c-territorio-subsección2" href="#" class="dropdown-item">Subsección 2</a>
-                </li>
-              </ul>
-            </li>
-            <!-- Otro dropdown similar para 'E. vida' -->
-          </ul>
-        </nav>
-      </div>
-  
-      <div class="container-body_right">
-        <div class="document-preview">
-          <div class="controller">
-                          <!-- Icono de retorno SVG -->
-                          <div class="icon-return" (click)="goBack()">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#5AA74E">
-                                <path d="M0 0h24v24H0V0z" fill="none"/>
-                                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z"/>
-                            </svg>
-                        </div>
-          <div class="document-data">
-            <h2>Filtrar Documento</h2>
-            <div class="grid-container">
-              <div class="grid-item">
-                <p class="doc-field-name"><strong>Subsección</strong></p>
-                <select name="select-document-type" class="doc-field-info">
-                  <option value="x" selected>x</option>
-                  <option value="y">y</option>
-                  <option value="z">z</option>
-                  <option value="w">w</option>
-                  <option value="zz">zz</option>
-                </select>
-              </div>
-              <div class="grid-item">
-                <p class="doc-field-name"><strong>Serie</strong></p>
-                <select name="select-document-type" class="doc-field-info">
-                  <option value="x" selected>x</option>
-                  <option value="y">y</option>
-                  <option value="z">z</option>
-                  <option value="w">w</option>
-                  <option value="zz">zz</option>
-                </select>
-              </div>
-              <div class="grid-item">
-                <p class="doc-field-name"><strong>Subsrie</strong></p>
-                <select name="select-document-type" class="doc-field-info">
-                  <option value="x" selected>x</option>
-                  <option value="y">y</option>
-                  <option value="z">z</option>
-                  <option value="w">w</option>
-                  <option value="zz">zz</option>
-                </select>
-              </div>
-              <div class="grid-item">
-                <p class="doc-field-name"><strong>N° Radicado</strong></p>
-                <input class="doc-field-info" />
-              </div>
-            </div>
-            <div class="buttons-control my-4">
-              <button type="button" class="btn btn-success mx-2 px-4">Buscar</button>
-            </div>
+    </div>
+  </header>
+
+  <div class="container-body">
+    <div class="container-body_left">
+
+      <nav>
+        <ul>
+          <li>Territorio
+            <ul class="dropdown-menu">
+              <li>Subsección 1
+                <ul>
+                  <li>Serie 1</li>
+                  <li>Serie 2</li>
+                  <li>Serie 3</li>
+                </ul>
+              </li>
+              <li>Subsección 2</li>
+            </ul>
+          </li>
+          <li>E. vida
+            <ul class="dropdown-menu">
+              <li>Subsección 1
+                <ul>
+                  <li>Serie 1</li>
+                  <li>Serie 2</li>
+                  <li>Serie 3</li>
+                </ul>
+              </li>
+              <li>Subsección 2</li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <button class="btn-generate">Generar Acta</button>
+    </div>
+
+    <div class="container-body_right">
+      <div class="filter-container">
+        <div class="icon-return" (click)="goBack()">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#5AA74E">
+            <path d="M0 0h24v24H0V0z" fill="none"/>
+            <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z"/>
+          </svg>
+        </div>
+        <h2>Filtrar Documento</h2>
+        <div class="grid-container">
+          <div>
+            <label for="subseccion">Subsección</label>
+            <select id="subseccion">
+              <option value="">x</option>
+            </select>
           </div>
+          <div>
+            <label for="serie">Serie</label>
+            <select id="serie">
+              <option value="">x</option>
+            </select>
+          </div>
+          <div>
+            <label for="subserie">Subserie</label>
+            <select id="subserie">
+              <option value="">x</option>
+            </select>
+          </div>
+          <div>
+            <label for="radicado">Nº Radicado</label>
+            <select id="radicado">
+              <option value="">x</option>
+            </select>
+          </div>
+        </div>
+        <div class="buttons-control">
+          <button class="btn-success">Buscar</button>
         </div>
       </div>
     </div>
-  
-    <footer class="footer border-top border-success">
-      <p style="text-align: center">
-        Copyright &copy; 2023-
-        <script>
-          document.write(new Date().getFullYear())
-        </script>
-        PEA-CRIC. Todos los derechos reservados.
-      </p>
-    </footer>
   </div>
-  
+
+  <footer class="footer">
+    Copyright © 2023-2024 PEA-CRIC. Todos los derechos reservados.
+  </footer>
+</div>

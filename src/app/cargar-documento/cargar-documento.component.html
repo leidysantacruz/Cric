@@ -74,71 +74,14 @@
                     <div class="button-container">
                         <button class="btn-upload">Elegir el archivo en mi ordenador</button>
                         <button class="btn-more">Añadir más archivos</button>
-                        <button id="btn-send" class="btn-send" (click)="openModal()">Enviar</button>
+                        <button id="btn-send" class="btn-send" (click)="redirectToPrevizualizacionInfo()">Enviar</button>
+
+
                     </div>
                 </div>
             </div>
 
-            <!-- Modal -->
-            <div id="myModal" class="modal" [ngClass]="{'show': showModal}">
-                <div class="modal-content">
-                    <span class="close" (click)="closeModal()">&times;</span>
-                    <form>
-                        <div class="form-row">
-                            <label>Subsección</label>
-                            <input type="text">
-                            <label>Serie</label>
-                            <input type="text">
-                        </div>
-                        <div class="form-row">
-                            <label>Subserie</label>
-                            <input type="text">
-                            <label>Tipo Documental</label>
-                            <input type="text">
-                        </div>
-                        <div class="form-row">
-                            <label>N° radicado</label>
-                            <input type="text">
-                            <label>Nombre Documento</label>
-                            <input type="text">
-                        </div>
-                        <div class="form-row">
-                            <label>Fecha de radicado</label>
-                            <input type="text">
-                            <label>Tipo Documento</label>
-                            <input type="text">
-                        </div>
-                        <div class="form-row">
-                            <label>Atributo 1</label>
-                            <input type="text">
-                            <label>Atributo #2</label>
-                            <input type="text">
-                        </div>
-                        <div class="form-row">
-                            <label>Atributo #n</label>
-                            <input type="text">
-                            <label>Nombre Archivo</label>
-                            <input type="text">
-                        </div>
-                        <div class="button-container">
-                            <button type="submit" class="btn-confirm" (click)="confirm($event)">Confirmar</button>
-                            <button type="button" class="btn-cancel" (click)="closeModal()">Cancelar</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-
-            <!-- Modal de Confirmación -->
-            <div id="successModal" class="modal" [ngClass]="{'show': showSuccessModal}">
-                <div class="modal-content">
-                    <p>El proceso fue exitoso!</p>
-                    <div class="button-container">
-                        <button class="btn-close-success" (click)="closeSuccessModal()">Cerrar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+         
 
     <footer class="footer">
         © Consejo regional indígena del Cauca 2023

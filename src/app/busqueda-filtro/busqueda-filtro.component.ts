@@ -1,18 +1,16 @@
-import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-busqueda-filtro',
   standalone: true,
-  imports: [CommonModule, FormsModule], // Agrega los módulos necesarios
   templateUrl: './busqueda-filtro.component.html',
-  styleUrls: ['./busqueda-filtro.component.css']
+  styleUrls: ['./busqueda-filtro.component.css'],
 })
 export class BusquedaFiltroComponent {
+  constructor(private router: Router) {}
+
   goBack() {
-    // Implementa la lógica para volver atrás
-    // Por ejemplo, usando Router para redirigir
-    // this.router.navigate(['/ruta-anterior']);
+    this.router.navigate(['/home']); 
   }
 }
