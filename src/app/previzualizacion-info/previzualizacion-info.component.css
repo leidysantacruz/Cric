@@ -75,8 +75,8 @@ body {
 .container-body {
     display: flex;
     flex: 1;
-    background-color: #fff; /* Fondo blanco dentro de las líneas verdes */
-    overflow: hidden; /* Evita el desplazamiento del contenedor */
+    background-color: #fff;
+    overflow: hidden;
 }
 
 .container-body_left {
@@ -137,39 +137,24 @@ body {
     margin-top: auto;
 }
 
-.btn-cargar-doc, .btn-filtros {
-    background-color: var(--color-green-dark);
-    color: var(--color-gray-light);
-    border: none;
-    padding: 10px 20px;
-    border-radius: 25px;
-    cursor: pointer;
-    margin: 0 10px;
-}
-
 .container-body_right {
     flex: 1;
-    padding: 20px;
-    overflow-y: auto; /* Permite el desplazamiento vertical solo en esta sección */
-    background-color: #fff; /* Fondo blanco para el área de contenido */
-}
-
-.controller {
+    padding: 10px;
+    overflow-y: auto;
+    background-color: #fff;
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 15px;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
 }
 
-/* Estilos para el formulario de previsualización */
 .container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #eeeeee;
-    border-radius: 30px;
-    position: relative;
-    text-align: center; /* Asegura que todos los elementos de texto se centren dentro del contenedor */
+    width: 70%; /* Ajusta el ancho total del formulario */
+    max-width: 900px; /* Establece un máximo ancho para el formulario */
+    padding: 40px; /* Ajusta el padding para hacerlo más largo */
+    border-radius: 15px; /* Redondea las esquinas del formulario */
+    background-color: #fff; /* Fondo blanco para el formulario */
+    margin-left: 10%; /* Mueve el formulario hacia la izquierda */
+    text-align: center; /* Centra el contenido del formulario */
 }
 
 .back-button {
@@ -184,21 +169,17 @@ body {
 }
 
 h2 {
-    text-align: center;
     color: black;
     font-size: 24px;
     font-weight: bold;
-    margin-top: 0; /* Elimina el margen superior si está presente */
-    margin-bottom: 20px; /* Espacio entre el título y el contenido */
+    margin-bottom: 20px; /* Espacio inferior */
 }
-
 
 .modal-content {
     background-color: #d3d3d3;
     padding: 20px;
     border-radius: 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
 }
 
 .form-row {
@@ -218,14 +199,35 @@ h2 {
     padding: 8px;
     border: none;
     border-bottom: 2px solid black;
-    background-color: transparent;
+    background-color: #ffffff; /* Cambia a gris claro */
     outline: none;
     box-sizing: border-box;
     color: black;
 }
 
-.form-row input[readonly] {
-    background-color: transparent;
+/* Asegura que los campos sean editables */
+.form-row input:not([readonly]) {
+    cursor: text;
+    background-color: #d0d0d0; /* Cambia a gris claro */
+}
+
+/* Formulario actualizado según la imagen */
+.formulario input {
+    width: calc(100% - 20px); /* Ajusta el ancho de los campos del formulario */
+    padding: 15px; /* Ajusta el padding para mayor área de clic */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    margin-bottom: 15px;
+    box-sizing: border-box; /* Asegura que el padding se incluya en el ancho total */
+}
+
+/* Ajusta el diseño de las filas del formulario */
+.formulario .form-row {
+    display: flex;
+    flex-direction: column; /* Cambia a columna para un diseño más largo y alineado */
+    width: 100%;
+    gap: 15px;
 }
 
 .button-container {
@@ -258,6 +260,5 @@ h2 {
     text-align: center;
     padding: 10px;
     font-size: 14px;
-    border-top: 1px solid var(--color-green-dark);
     flex-shrink: 0;
 }
