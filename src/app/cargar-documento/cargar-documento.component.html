@@ -1,89 +1,102 @@
-<div class="container-main">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cargar Documento</title>
+
+</head>
+<body>
+  <div class="container-main">
+    <!-- Header -->
     <header class="header">
-        <div class="header-content">
-            <a href="#" class="sitea-title">SITEA</a>
-            <form>
-                <input type="text" placeholder="Buscar">
-                <button type="submit" class="btn-search">Buscar</button>
-            </form>
-        </div>
+      <div class="header-content">
+        <a href="#" class="sitea-title">SITEA</a>
+        <form>
+          <input type="text" placeholder="Buscar">
+          <button type="submit" class="btn-search">Buscar</button>
+        </form>
+      </div>
     </header>
 
+    <!-- Main Content -->
     <div class="container-body">
-        <div class="container-body_left">
-            <nav>
-                <ul>
-                    <li>Nombre de Componente
-                        <ul class="dropdown-menu">
-                            <li>Subsección 1</li>
-                            <li>Subsección 2</li>
-                            <li>Subsección 3</li>
-                            <li>Subsección n</li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-            <button class="btn-generate">Generar Acta</button>
-        </div>
+      <div class="container-body_left">
+        <nav>
+          <ul>
+            <li>Nombre de Componente
+              <ul class="dropdown-menu">
+                <li>Subsección 1</li>
+                <li>Subsección 2</li>
+                <li>Subsección 3</li>
+                <li>Subsección n</li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <button class="btn-generate">Generar Acta</button>
+      </div>
 
-        <div class="container-body_right">
-            <div class="document-form">
-                <div class="form-row">
-                    <label>Subsección</label>
-                    <select>
-                        <option>Seleccione</option>
-                    </select>
-                </div>
-                <div class="form-row">
-                    <label>Serie</label>
-                    <select>
-                        <option>Seleccione</option>
-                    </select>
-                </div>
-                <div class="form-row">
-                    <label>Subserie</label>
-                    <select>
-                        <option>Seleccione</option>
-                    </select>
-                </div>
-                <div class="form-row">
-                    <label>Tipo Documental</label>
-                    <select>
-                        <option>Seleccione</option>
-                    </select>
-                </div>
-                <div class="form-row">
-                    <label>Nombre de Documento</label>
-                    <input type="text">
-                </div>
-                <div class="form-row">
-                    <label>Atributo #1</label>
-                    <input type="text">
-                </div>
-                <div class="form-row">
-                    <label>Atributo #2</label>
-                    <input type="text">
-                </div>
-                <div class="form-row">
-                    <label>Atributo #n</label>
-                    <input type="text">
-                </div>
-                <div class="upload-zone">
-                    <p>Arrastra archivos a esta zona</p>
-                    <p>o</p>
-                    <div class="button-container">
-                        <button class="btn-upload">Elegir el archivo en mi ordenador</button>
-                        <button class="btn-more">Añadir más archivos</button>
-                        <button id="btn-send" class="btn-send" (click)="redirectToPrevizualizacionInfo()">Enviar</button>
+      <div class="container-body_right">
+        <div class="document-form">
+          <div class="form-row">
+            <label for="subseccion">Subsección</label>
+            <select id="subseccion">
+              <option>Seleccione</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="serie">Serie</label>
+            <select id="serie">
+              <option>Seleccione</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="subserie">Subserie</label>
+            <select id="subserie">
+              <option>Seleccione</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="tipo-documental">Tipo Documental</label>
+            <select id="tipo-documental">
+              <option>Seleccione</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="nombre-documento">Nombre de Documento</label>
+            <input type="text" id="nombre-documento">
+          </div>
+          <div class="form-row">
+            <label for="atributo1">Atributo #1</label>
+            <input type="text" id="atributo1">
+          </div>
+          <div class="form-row">
+            <label for="atributo2">Atributo #2</label>
+            <input type="text" id="atributo2">
+          </div>
+          <div class="form-row">
+            <label for="atributo-n">Atributo #n</label>
+            <input type="text" id="atributo-n">
+          </div>
+          <div class="upload-zone">
+            <p>Arrastra archivos a esta zona</p>
+            <p>o</p>
+            <div class="button-container">
+              <button class="btn-upload">Elegir el archivo en mi ordenador</button>
+              <button class="btn-more">Añadir más archivos</button>
+              <button id="btn-send" class="btn-send" (click)="redirectToPrevizualizacionInfo()">Enviar</button>
 
-
-                    </div>
-                </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-         
-
+    <!-- Footer -->
     <footer class="footer">
-        © Consejo regional indígena del Cauca 2023
+      © Consejo regional indígena del Cauca 2023
     </footer>
-</div>
+  </div>
+</body>
+</html>

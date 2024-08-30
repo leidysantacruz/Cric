@@ -22,12 +22,16 @@ export class ListarComponent {
     this.showModal = false;
   }
 
-
   openNuevoView() {
     this.closeModal();  
     this.router.navigate(['/cargar-documento']);  
   }
+
   redirectToGenerarActa() {
     this.router.navigate(['/generar-acta']);
+  }
+
+  redirectToVerDocumento() {
+    this.router.navigate(['/ver-documento']);
   }
 }

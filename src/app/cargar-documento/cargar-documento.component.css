@@ -17,13 +17,14 @@ body {
   height: 100vh;
   background-color: var(--color-gray-dark);
   font-family: sans-serif;
-  overflow: hidden;
+  overflow: hidden; /* Evita el scroll en la página completa */
 }
 
 .container-main {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100vh; /* Ocupa todo el alto del viewport */
+  overflow: hidden; /* Evita el desbordamiento en el contenedor principal */
 }
 
 .header {
@@ -76,7 +77,7 @@ body {
   display: flex;
   flex: 1;
   background-color: #fff;
-  overflow: hidden;
+  overflow-y: auto; /* Permite el scroll solo en el área del contenido principal */
 }
 
 .container-body_left {
@@ -140,7 +141,7 @@ body {
 .container-body_right {
   flex: 1;
   padding: 20px;
-  overflow-y: auto;
+  overflow-y: auto; /* El área derecha puede hacer scroll si es necesario */
   background-color: #fff;
 }
 
@@ -211,139 +212,4 @@ body {
   padding: 10px;
   text-align: center;
   flex-shrink: 0;
-}
-
-/* Modal Styles */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: hidden; /* Hide scrollbars */
-  background-color: rgba(0, 0, 0, 0.4); /* Black background with opacity */
-}
-
-.modal.show {
-  display: block; /* Show the modal */
-}
-
-.modal-content {
-  background-color: var(--color-gray-light);
-  margin: 10% auto; /* Center horizontally and add margin from top */
-  padding: 20px;
-  border: 1px solid var(--color-green-dark); /* Single green border */
-  border-radius: 10px;
-  width: 80%;
-  max-width: 1200px; /* Adjusted width for more space */
-  position: relative;
-  transform: translateX(10%); /* Move modal slightly to the right */
-}
-
-.close {
-  color: var(--color-gray-dark);
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: var(--color-red);
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.modal form {
-  display: flex;
-  flex-direction: row; /* Horizontal layout */
-  flex-wrap: wrap; /* Wrap if needed */
-  gap: 20px;
-  align-items: flex-start; /* Align items to the start */
-}
-
-.modal .form-row {
-  display: flex;
-  flex-direction: column;
-  flex: 1 1 300px; /* Allow a minimum width for rows */
-  margin-bottom: 15px;
-}
-
-.modal .form-row label {
-  margin-bottom: 5px;
-}
-
-.modal .form-row input,
-.modal .form-row select {
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  width: 100%; /* Full width for input fields */
-}
-
-.button-container {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 20px;
-}
-
-.btn-confirm {
-  background-color: var(--color-green-dark);
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.btn-cancel {
-  background-color: red; /* Red color for cancel button */
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.btn-confirm:hover, .btn-cancel:hover {
-  opacity: 0.8;
-}
-
-#successModal {
-  background-color: var(--color-gray-light); /* Color uniforme de fondo */
-  width: 400px; /* Ancho del modal */
-  height: 250px; /* Altura del modal */
-  padding: 20px;
-  border: 1px solid var(--color-green-dark); /* Borde verde */
-  border-radius: 10px;
-  position: fixed; /* Posición fija */
-  top: 35%; /* Centrar verticalmente */
-  left: 50%; /* Centrar horizontalmente */
-  transform: translate(-50%, -50%); /* Perfectamente centrado */
-  text-align: center;
-  overflow: hidden; /* Ocultar desbordamiento */
-}
-
-
-#successModal p {
-  font-size: 18px;
-  color: var(--color-gray-dark);
-  margin: 0;
-}
-
-#successModal .btn-close-success {
-  background-color: var(--color-green-dark);
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 25px; /* Oval shape */
-  cursor: pointer;
-  margin-top: 20px;
-}
-
-#successModal .btn-close-success:hover {
-  opacity: 0.8;
 }
