@@ -3,10 +3,6 @@
   --color-gray: #383B39; 
   --color-gray-light: #D9D9D9;
   --color-green-dark: #5AA74E;
-  --color-green-light: #A5D59D;
-  --color-brown: #6c4646;
-  --color-yellow: #F1C40F;
-  --color-red: #E74C3C;
   --font-size-category: 17px;
 }
 
@@ -231,7 +227,7 @@ body {
   margin: 10% auto; 
   padding: 20px;
   border: 1px solid var(--color-gray);
-  width: 50%; /* Ancho del modal */
+  width: 50%; 
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }

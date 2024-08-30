@@ -9,7 +9,7 @@ import { PrevizualizacionInfoComponent } from './previzualizacion-info/previzual
 import { VerDocumentoComponent } from './ver-documento/ver-documento.component';
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', redirectTo: '/login', pathMatch: 'full' }, 
   { path: 'login', component: LoginComponent },
   { path: 'listar', component: ListarComponent },
   { path: 'cargar-documento', component: CargarDocumentoComponent },
@@ -17,5 +17,5 @@ export const routes: Routes = [
   { path: 'busqueda-filtro', component: BusquedaFiltroComponent },
   { path: 'previzualizacion-info', component: PrevizualizacionInfoComponent },
   { path: 'ver-documento', component: VerDocumentoComponent },
-  { path: '**', redirectTo: '' }
+  { path: '**', redirectTo: '/login' } 
 ];
