@@ -1,6 +1,6 @@
 :root {
-    --color-gray-dark: #1a1a1a; /* Negro más oscuro */
-    --color-gray: #383B39; /* Negro más claro */
+    --color-gray-dark: #1a1a1a; 
+    --color-gray: #383B39; 
     --color-gray-light: #D9D9D9;
     --color-green-dark: #5AA74E;
     --color-green-light: #A5D59D;
@@ -12,9 +12,9 @@ body {
     padding: 0;
     width: 100%;
     height: 100vh;
-    background-color: var(--color-gray-dark); /* Fondo negro fuera de la tabla */
+    background-color: var(--color-gray-dark); 
     font-family: sans-serif;
-    overflow: hidden; /* Evita que se desplace la plantilla */
+    overflow: hidden; 
 }
 
 .container-main {
@@ -72,8 +72,8 @@ body {
 .container-body {
     display: flex;
     flex: 1;
-    background-color: #fff; /* Fondo blanco dentro de las líneas verdes */
-    overflow: hidden; /* Evita el desplazamiento del contenedor */
+    background-color: #fff; 
+    overflow: hidden; 
 }
 
 .container-body_left {
@@ -147,8 +147,8 @@ body {
 .container-body_right {
     flex: 1;
     padding: 20px;
-    overflow-y: auto; /* Permite el desplazamiento vertical solo en esta sección */
-    background-color: #fff; /* Fondo blanco para el área de contenido */
+    overflow-y: auto; 
+    background-color: #fff;
 }
 
 .controller {
@@ -183,11 +183,11 @@ body {
 }
 
 .view-btn {
-    background-color: var(--color-green-dark); /* Mismo color que el botón 'Generar Acta' */
-    color: var(--color-gray-light); /* Color del texto del botón */
+    background-color: var(--color-green-dark); 
+    color: var(--color-gray-light); 
     border: none;
     padding: 6px 12px;
-    border-radius: 25px; /* Hacer el botón ovalado */
+    border-radius: 25px; 
     cursor: pointer;
     text-align: center;
     font-size: var(--font-size-category);

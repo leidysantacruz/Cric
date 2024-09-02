@@ -15,14 +15,14 @@ body {
   height: 100vh;
   background-color: var(--color-gray-dark);
   font-family: sans-serif;
-  overflow: hidden; /* Evita el scroll en la página completa */
+  overflow: hidden; 
 }
 
 .container-main {
   display: flex;
   flex-direction: column;
-  height: 100vh; /* Ocupa todo el alto del viewport */
-  overflow: hidden; /* Evita el desbordamiento en el contenedor principal */
+  height: 100vh; 
+  overflow: hidden; 
 }
 
 .header {
@@ -75,7 +75,7 @@ body {
   display: flex;
   flex: 1;
   background-color: #fff;
-  overflow-y: auto; /* Permite el scroll solo en el área del contenido principal */
+  overflow-y: auto; 
 }
 
 .container-body_left {
@@ -139,7 +139,7 @@ body {
 .container-body_right {
   flex: 1;
   padding: 20px;
-  overflow-y: auto; /* El área derecha puede hacer scroll si es necesario */
+  overflow-y: auto; 
   background-color: #fff;
 }
 
@@ -162,10 +162,10 @@ body {
 .form-row select,
 .form-row input {
   padding: 8px;
-  border: none; /* Elimina el borde predeterminado */
-  border-bottom: 1px solid #000; /* Cambia el grosor del borde inferior a 1px */
-  border-radius: 0; /* Elimina el radio en las esquinas para el borde inferior */
-  background-color: #fff; /* Fondo blanco para los campos */
+  border: none; 
+  border-bottom: 1px solid #000; 
+  border-radius: 0; 
+  background-color: #fff; 
 }
 
 
@@ -215,7 +215,7 @@ body {
   flex-shrink: 0;
 }
 
-/* Estilos específicos para el icono de regreso */
+
 
 .back-button {
   display: flex;

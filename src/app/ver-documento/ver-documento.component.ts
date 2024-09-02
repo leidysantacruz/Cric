@@ -12,5 +12,5 @@ export class VerDocumentoComponent {
 goBack() {
 throw new Error('Method not implemented.');
 }
-  pdfSrc = 'src/assets/analisis-comparativo_MySQL-Oracle.pdf'; // Ruta del archivo PDF
+  pdfSrc = 'src/assets/analisis-comparativo_MySQL-Oracle.pdf'; 
 }

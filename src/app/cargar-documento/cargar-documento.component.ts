@@ -15,7 +15,7 @@ export class CargarDocumentoComponent {
   }
 
   goBack() {
-    // Redirige a la página anterior usando la historia del navegador
+   
     this.router.navigate(['./listar']);
   }
 }
