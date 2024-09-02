@@ -3,6 +3,7 @@
     --color-gray: #383B39; 
     --color-gray-light: #D9D9D9;
     --color-green-dark: #5AA74E;
+    --color-green-light: #B2B2B2; /* Añadido para el color en el menú */
     --font-size-category: 17px;
 }
 
@@ -16,13 +17,11 @@ body {
     overflow: hidden;
 }
 
-
 .container-main {
     display: flex;
     flex-direction: column;
     height: 100vh;
 }
-
 
 .header {
     background-color: var(--color-gray);
@@ -70,14 +69,12 @@ body {
     cursor: pointer;
 }
 
-
 .container-body {
     display: flex;
     flex: 1;
     background-color: #fff;
     overflow: hidden;
 }
-
 
 .container-body_left {
     width: 250px;
@@ -137,7 +134,6 @@ body {
     margin-top: auto;
 }
 
-
 .container-body_right {
     flex: 1;
     padding: 10px;
@@ -154,7 +150,6 @@ body {
     border-radius: 15px; 
     padding: 40px; 
     text-align: center; 
-    
 }
 
 /* Icono de "devolverse" */
@@ -165,7 +160,6 @@ body {
     z-index: 1000;
     cursor: pointer;
 }
-
 
 .back-button svg {
     width: 40px; /* Tamaño del icono */
@@ -179,13 +173,55 @@ h2 {
     margin-bottom: 20px; 
 }
 
-.modal-content {
-    background-color: #d3d3d3;
-    padding: 20px;
-    border-radius: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Asegúrate de que esté por encima de otros contenidos */
+    visibility: hidden; /* Ocultar por defecto */
+    opacity: 0; /* Ocultar por defecto */
+    transition: visibility 0s, opacity 0.3s ease; /* Transición suave */
 }
 
+/* Mostrar el modal */
+.modal.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: var(--color-gray-light);
+    padding: 30px;
+    border-radius: 10px; /* Tamaño reducido del borde */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 1000px; /* Ancho del modal */
+    max-width: 90%; /* Máximo ancho del modal */
+}
+
+/* Botón de cerrar del modal */
+.btn-close {
+    background-color: var(--color-green-dark);
+    color: var(--color-gray-light);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.formulario {
+    width: 100%; /* Asegúrate de que el formulario ocupe el ancho completo del modal */
+    max-width: 900px; /* Ancho máximo del formulario dentro del modal */
+    margin: 0 auto; /* Centrar el formulario horizontalmente */
+}
+
+/* Ajuste específico para filas en el formulario */
 .form-row {
     display: flex;
     justify-content: space-between;
@@ -195,50 +231,31 @@ h2 {
 .form-row label {
     font-size: 16px;
     color: black;
-    width: 23%;
+    width: 25%; /* Ancho de las etiquetas en la fila */
 }
 
 .form-row input {
-    width: 23%;
-    padding: 8px;
-    border: none;
-    border-bottom: 2px solid black;
-    background-color: #ffffff;
-    outline: none;
-    box-sizing: border-box;
-    color: black;
+    width: 70%; /* Ancho de los campos de entrada en la fila */
+    padding: 10px; /* Espaciado interno */
+    border: none; /* Eliminar el borde por defecto */
+    border-bottom: 1px solid #000; /* Línea negra en la parte inferior más delgada */
+    border-radius: 0; /* Eliminar el radio del borde para que sea solo una línea */
+    background-color: #D9D9D9;/* Color de fondo igual al del formulario */
+    box-sizing: border-box; /* Incluir padding y border en el ancho total */
 }
 
-
-.form-row input:not([readonly]) {
-    cursor: text;
-    background-color: #d0d0d0; 
-}
-
-
-.formulario input {
-    width: calc(100% - 20px); 
-    padding: 15px; 
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: #fff;
-    margin-bottom: 15px;
-    box-sizing: border-box; 
-}
-
-
-.formulario .form-row {
-    display: flex;
-    flex-direction: column; 
+/* Asegúrate de que los campos de entrada ocupen todo el ancho disponible */
+.formulario input.full-width {
     width: 100%;
-    gap: 15px;
 }
 
+/* Estilo para la fila del botón */
 .button-container {
     text-align: center;
     margin-top: 20px;
 }
 
+/* Estilo para los botones dentro del formulario */
 .btn-confirm {
     background-color: #4CAF50;
     color: white;

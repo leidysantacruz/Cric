@@ -1,73 +1,136 @@
-<div class="container-main">
-    <header class="header">
-        <div class="header-content">
-            <a href="#" class="sitea-title">SITEA</a>
-            <form>
-                <input type="text" placeholder="Buscar">
-                <button type="submit" class="btn-search">Buscar</button>
-            </form>
-        </div>
-    </header>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SITEA</title>
 
-    <div class="container-body">
-        <div class="container-body_left">
-            <nav>
-                <ul>
-                    <li>Nombre de Componente
-                        <ul class="dropdown-menu">
-                            <li>Subsección 1</li>
-                            <li>Subsección 2</li>
-                            <li>Subsección 3</li>
-                            <li>Subsección n</li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-            <button class="btn-generate" (click)="redirectToGenerarActa()">Generar Acta</button>
-        </div>
+</head>
+<body>
+    <div class="container-main">
+        <header class="header">
+            <div class="header-content">
+                <a href="#" class="sitea-title">
+                    SITEA
+              
+                
+                </a>
+                <form>
+                    <input type="text" placeholder="Buscar">
+                    <button type="submit" class="btn-search">Buscar</button>
+                </form>
+            </div>
+        </header>
 
-        <div class="container-body_right">
-            <div class="controller">
-                <button class="btn-cargar-doc" (click)="openModal()">Cargar documento</button>
+        <div class="container-body">
+            <div class="container-body_left">
+                <nav>
+                    <ul>
+                        <li>Nombre de Componente
+                            <ul class="dropdown-menu">
+                                <li>Subsección 1</li>
+                                <li>Subsección 2</li>
+                                <li>Subsección 3</li>
+                                <li>Subsección n</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <button class="btn-generate" (click)="redirectToGenerarActa()">Generar Acta</button>
             </div>
 
-            <div id="myModal" class="modal" [ngClass]="{'show': showModal}">
-                <div class="modal-content">
-                    <span class="close" (click)="closeModal()">&times;</span>
-                    <p>¿El documento que desea cargar a qué proceso está relacionado?</p>
-                    <p>Seleccione la opción que corresponda</p>
-                    <button class="btn-new" (click)="openNuevoView()">Nuevo</button>
-                    <button class="btn-existing">Existente</button>
+            <div class="container-body_right">
+               
+                <div class="back-button" (click)="goBack()">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#5AA74E">
+                        <path d="M0 0h24v24H0V0z" fill="none"/>
+                        <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z"/>
+                    </svg>
                 </div>
-            </div>
 
-            <table class="document-table">
-                <thead>
-                    <tr>
-                        <th>Nombre Del Proceso</th>
-                        <th>Nombre del documento</th>
-                        <th>Radicado Secundario</th>
-                        <th>Acción</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td>
-                            <button class="btn view" title="Ver" (click)="redirectToVerDocumento()">Ver</button>
-                            <button class="btn edit" title="Editar">Editar</button>
-                            <button class="btn delete" title="Eliminar">Eliminar</button>
-                        </td>
-                    </tr>
-                 
-                </tbody>
-            </table>
+                <div class="controller">
+                    <button class="btn-cargar-doc" (click)="openModal()">Cargar documento</button>
+                </div>
+
+                <div id="myModal" class="modal" [ngClass]="{'show': showModal}">
+                    <div class="modal-content">
+                        <span class="close" (click)="closeModal()">&times;</span>
+                        <p>¿El documento que desea cargar a qué proceso está relacionado?</p>
+                        <p>Seleccione la opción que corresponda</p>
+                        <button class="btn-new" (click)="openNuevoView()">Nuevo</button>
+                        <button class="btn-existing">Existente</button>
+                    </div>
+                </div>
+
+                <table class="document-table">
+                    <thead>
+                        <tr>
+                            <th>Nombre Del Proceso</th>
+                            <th>Nombre del documento</th>
+                            <th>Radicado Secundario</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <button class="btn view" title="Ver" (click)="redirectToVerDocumento()">Ver</button>
+                                <button class="btn edit" title="Editar">Editar</button>
+                                <button class="btn delete" title="Eliminar">Eliminar</button>
+                                
+                        </tr>
+                       
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <button class="btn view" title="Ver" (click)="redirectToVerDocumento()">Ver</button>
+                                <button class="btn edit" title="Editar">Editar</button>
+                                <button class="btn delete" title="Eliminar">Eliminar</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <button class="btn view" title="Ver" (click)="redirectToVerDocumento()">Ver</button>
+                                <button class="btn edit" title="Editar">Editar</button>
+                                <button class="btn delete" title="Eliminar">Eliminar</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <button class="btn view" title="Ver" (click)="redirectToVerDocumento()">Ver</button>
+                                <button class="btn edit" title="Editar">Editar</button>
+                                <button class="btn delete" title="Eliminar">Eliminar</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <button class="btn view" title="Ver" (click)="redirectToVerDocumento()">Ver</button>
+                                <button class="btn edit" title="Editar">Editar</button>
+                                <button class="btn delete" title="Eliminar">Eliminar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="footer">
+            © Consejo regional indígena del Cauca 2023
         </div>
     </div>
-
-    <div class="footer">
-        © Consejo regional indígena del Cauca 2023
-    </div>
-</div>
+</body>
+</html>

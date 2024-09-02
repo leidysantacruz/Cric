@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router'; 
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cargar-documento',
@@ -12,5 +12,10 @@ export class CargarDocumentoComponent {
 
   redirectToPrevizualizacionInfo() {
     this.router.navigate(['/previzualizacion-info']);
+  }
+
+  goBack() {
+    // Redirige a la página anterior usando la historia del navegador
+    this.router.navigate(['./listar']);
   }
 }

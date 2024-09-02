@@ -4,9 +4,7 @@
   --color-gray-light: #D9D9D9;
   --color-green-dark: #5AA74E;
   --color-green-light: #A5D59D;
-  --color-brown: #6c4646;
-  --color-yellow: #F1C40F;
-  --color-red: #E74C3C;
+
   --font-size-category: 17px;
 }
 
@@ -164,9 +162,12 @@ body {
 .form-row select,
 .form-row input {
   padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border: none; /* Elimina el borde predeterminado */
+  border-bottom: 1px solid #000; /* Cambia el grosor del borde inferior a 1px */
+  border-radius: 0; /* Elimina el radio en las esquinas para el borde inferior */
+  background-color: #fff; /* Fondo blanco para los campos */
 }
+
 
 .upload-zone {
   width: 100%;
@@ -212,4 +213,16 @@ body {
   padding: 10px;
   text-align: center;
   flex-shrink: 0;
+}
+
+/* Estilos específicos para el icono de regreso */
+
+.back-button {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.back-button svg {
+  fill: var(--color-green-dark);
 }

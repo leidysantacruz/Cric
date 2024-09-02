@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cargar Documento</title>
-
 </head>
 <body>
   <div class="container-main">
@@ -38,6 +37,14 @@
       </div>
 
       <div class="container-body_right">
+        <!-- Icono de regreso -->
+        <div class="back-button" (click)="goBack()">
+          <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 0 24 24" width="30px" fill="#5AA74E">
+            <path d="M0 0h24v24H0V0z" fill="none"/>
+            <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z"/>
+          </svg>
+        </div>
+        
         <div class="document-form">
           <div class="form-row">
             <label for="subseccion">Subsección</label>
@@ -86,7 +93,6 @@
               <button class="btn-upload">Elegir el archivo en mi ordenador</button>
               <button class="btn-more">Añadir más archivos</button>
               <button id="btn-send" class="btn-send" (click)="redirectToPrevizualizacionInfo()">Enviar</button>
-
             </div>
           </div>
         </div>

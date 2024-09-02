@@ -1,18 +1,23 @@
 import { Component } from '@angular/core';
-import { NgClass } from '@angular/common'; 
-import { Router } from '@angular/router'; 
+import { NgClass } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-listar',
-  standalone: true, 
-  imports: [NgClass], 
+  standalone: true,
+  imports: [NgClass],
   templateUrl: './listar.component.html',
   styleUrls: ['./listar.component.css']
 })
 export class ListarComponent {
   showModal: boolean = false;
 
-  constructor(private router: Router) {} 
+  constructor(private router: Router) {}
+
+  goBack() {
+    this.router.navigate(['/home']);
+  }
+  
 
   openModal() {
     this.showModal = true;
@@ -23,8 +28,8 @@ export class ListarComponent {
   }
 
   openNuevoView() {
-    this.closeModal();  
-    this.router.navigate(['/cargar-documento']);  
+    this.closeModal();
+    this.router.navigate(['/cargar-documento']);
   }
 
   redirectToGenerarActa() {

@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { CommonModule } from '@angular/common'; // Import CommonModule
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-previzualizacion-info',
   standalone: true,
   templateUrl: './previzualizacion-info.component.html',
   styleUrls: ['./previzualizacion-info.component.css'],
-  imports: [CommonModule], // Add CommonModule to imports
+  imports: [CommonModule],
 })
 export class PrevizualizacionInfoComponent {
   isModalVisible: boolean = false;

@@ -1,21 +1,21 @@
 <div class="container">
-    <div class="container-login">
-        <h1>SITEA</h1>
-        <div class="container-form">
-            <form class="text-center w-75">
-                <div class="mb-3">
-                  <label for="userName" class="form-label fs-4">Usuario</label>
-                  <input type="password" class="form-control w-100" id="userName">
-                </div>
-                <div class="mb-3">
-                    <label for="userName" class="form-label fs-4">Contraseña</label>
-                    <input type="password" class="form-control" id="userName">
-                  </div>
-                <button type="submit" class="btn my-4 px-4 fs-5 rounded-pill border border-success shadow">Ingresar</button>
-              </form>
-        </div>
-    </div>
+  <div class="container-login">
+      <h1>SITEA</h1>
+      <div class="container-form">
+          <form class="text-center w-75">
+              <div class="mb-3">
+                <label for="username" class="form-label fs-4">Usuario</label>
+                <input type="text" class="form-control w-100" id="username">
+              </div>
+              <div class="mb-3">
+                  <label for="password" class="form-label fs-4">Contraseña</label>
+                  <input type="password" class="form-control" id="password">
+              </div>
+              <button type="button" class="btn my-4 px-4 fs-5 rounded-pill border border-success shadow" (click)="navigateToMain()">Ingresar</button>
+            </form>
+      </div>
+  </div>
 </div>
 <footer class="footer border-top border-success">
-    <p style="text-align: center"> Copyright &copy; 2023-<script>document.write(new Date().getFullYear())</script> PEA-CRIC. Todos los derechos reservados.</p>
+  <p style="text-align: center"> Copyright &copy; 2023-<script>document.write(new Date().getFullYear())</script> PEA-CRIC. Todos los derechos reservados.</p>
 </footer>
