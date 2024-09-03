@@ -7,7 +7,6 @@
 </head>
 <body>
   <div class="container-main">
-   
     <header class="header">
       <div class="header-content">
         <a href="#" class="sitea-title">SITEA</a>
@@ -36,7 +35,6 @@
       </div>
 
       <div class="container-body_right">
-       
         <div class="back-button" (click)="goBack()">
           <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 0 24 24" width="30px" fill="#5AA74E">
             <path d="M0 0h24v24H0V0z" fill="none"/>
@@ -85,12 +83,12 @@
             <label for="atributo-n">Atributo #n</label>
             <input type="text" id="atributo-n">
           </div>
-          <div class="upload-zone">
+          <div class="upload-zone" (dragover)="onDragOver($event)" (drop)="onFileDropped($event)">
             <p>Arrastra archivos a esta zona</p>
             <p>o</p>
             <div class="button-container">
-              <button class="btn-upload">Elegir el archivo en mi ordenador</button>
-             
+              <button class="btn-upload" (click)="triggerFileInput()">Elegir el archivo en mi ordenador</button>
+              <input type="file" id="fileInput" (change)="onFileSelected($event)" style="display: none;" />
               <button id="btn-send" class="btn-send" (click)="redirectToPrevizualizacionInfo()">Enviar</button>
             </div>
           </div>
@@ -98,7 +96,6 @@
       </div>
     </div>
 
-   
     <footer class="footer">
       © Consejo regional indígena del Cauca 2023
     </footer>

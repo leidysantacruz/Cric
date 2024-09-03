@@ -1,92 +1,95 @@
 <div class="container-main">
-    <header class="header">
-      <div class="header-content">
-        <a href="#" class="sitea-title">SITEA</a>
-        <form>
-          <input type="text" placeholder="Buscar">
-          <button class="btn-search">Buscar</button>
-        </form>
+  <header class="header">
+    <div class="header-content">
+      <a href="#" class="sitea-title">SITEA</a>
+      <form>
+        <input type="text" placeholder="Buscar">
+        <button class="btn-search">Buscar</button>
+      </form>
+    </div>
+  </header>
+
+  <div class="container-body">
+    <div class="container-body_left">
+      <nav>
+        <ul>
+          <li>Territorio
+            <ul class="dropdown-menu">
+              <!-- Aquí puedes agregar más opciones -->
+            </ul>
+          </li>
+          <li>E. vida
+            <ul class="dropdown-menu">
+              <!-- Aquí puedes agregar más opciones -->
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="container-body_right">
+      <!-- Aquí está el nuevo ícono de retorno -->
+      <div class="icon-return" (click)="goBack()">
+        <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 0 24 24" width="30px" fill="#5AA74E">
+          <path d="M0 0h24v24H0V0z" fill="none"/>
+          <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z"/>
+        </svg>
       </div>
-    </header>
-  
-    <div class="container-body">
-      <div class="container-body_left">
-        <nav>
-          <ul>
-            <li>Territorio ▼
-              <ul class="dropdown-menu">
-                <!-- Agrega los elementos del menú desplegable aquí -->
-              </ul>
-            </li>
-            <li>E. vida ▼
-              <ul class="dropdown-menu">
-                <!-- Agrega los elementos del menú desplegable aquí -->
-              </ul>
-            </li>
-          </ul>
-        </nav>
-      </div>
-  
-      <div class="container-body_right">
-        <div class="icon-return">
-          <svg viewBox="0 0 24 24">
-            <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
-          </svg>
-        </div>
-        <div class="filter-container">
-          <h2>Generar Acta</h2>
-          <form class="grid-container">
-            <div>
-              <label for="subseccion">Subsección</label>
-              <select id="subseccion">
-                <option>xxxxx</option>
-              </select>
-            </div>
-            <div>
-              <label for="serie">Serie</label>
-              <select id="serie">
-                <option>xxxxx</option>
-              </select>
-            </div>
-            <div>
-              <label for="subserie">Subserie</label>
-              <select id="subserie">
-                <option>xxxxx</option>
-              </select>
-            </div>
-            <div>
-              <label for="nombre-acta">Nombre Acta:</label>
-              <input type="text" id="nombre-acta">
-            </div>
-            <div>
-              <label for="fecha">Fecha:</label>
-              <input type="date" id="fecha">
-            </div>
-            <div>
-              <label for="asunto">Asunto:</label>
-              <input type="text" id="asunto">
-            </div>
-            <div>
-              <label for="lugar">Lugar:</label>
-              <input type="text" id="lugar">
-            </div>
-            <div>
-              <label for="orden-dia">Orden del día:</label>
-              <textarea id="orden-dia" rows="4"></textarea>
-            </div>
-            <div>
-              <label for="desarrollo">Desarrollo:</label>
-              <textarea id="desarrollo" rows="4"></textarea>
-            </div>
-          </form>
-          <div class="buttons-control">
-            <button class="btn-success">Generar Acta</button>
+
+      <div class="filter-container">
+        <h2>Generar Acta</h2>
+        <form class="grid-container">
+          <div>
+            <label for="subseccion">Subsección</label>
+            <select id="subseccion">
+              <option></option>
+            </select>
           </div>
+          <div>
+            <label for="serie">Serie</label>
+            <select id="serie">
+              <option></option>
+            </select>
+          </div>
+          <div>
+            <label for="subserie">Subserie</label>
+            <select id="subserie">
+              <option></option>
+            </select>
+          </div>
+          <div>
+            <label for="nombre-acta">Nombre Acta:</label>
+            <input type="text" id="nombre-acta">
+          </div>
+          <div>
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha">
+          </div>
+          <div>
+            <label for="asunto">Asunto:</label>
+            <input type="text" id="asunto">
+          </div>
+          <div>
+            <label for="lugar">Lugar:</label>
+            <input type="text" id="lugar">
+          </div>
+          <div>
+            <label for="orden-dia">Orden del día:</label>
+            <textarea id="orden-dia" rows="4"></textarea>
+          </div>
+          <div>
+            <label for="desarrollo">Desarrollo:</label>
+            <textarea id="desarrollo" rows="4"></textarea>
+          </div>
+        </form>
+        <div class="buttons-control">
+          <button class="btn-success">enviar</button>
         </div>
       </div>
     </div>
-  
-    <footer class="footer">
-      <p>Copyright © 2023-2024 PEA-CRIC. Todos los derechos reservados.</p>
-    </footer>
   </div>
+
+  <footer class="footer">
+    <p>Copyright © 2023-2024 PEA-CRIC. Todos los derechos reservados.</p>
+  </footer>
+</div>
